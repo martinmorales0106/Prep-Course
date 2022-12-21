@@ -26,10 +26,11 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-  const arrayN = [];
-  for (i = 0; i < array.length; i++){
-    return arrayN[i] = array[i] + 1;
+  let arrayN = [];
+  for (let i = 0; i < array.length; i++){
+       arrayN[i] = array[i] + 1;
   }
+  return arrayN
 
 }
 
@@ -100,7 +101,7 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-  const grande = numeros[0];
+  let grande = numeros[0];
   for (let i = 0; i < numeros.length; i++){
     if(numeros[i] > grande){
       grande = numeros[i];
@@ -221,20 +222,20 @@ function breakStatement(numero) {
   //Pista: usá el statement 'break'
   // Tu código:
   let array = [];
-  let sumar = numero;
-  for(let i = 0; i < 10; i++){
-    sumar += 2;
-    if(sumar == i){
-      break;
+  let sumas = numero;
+  for(var i= 0; i<10; i++) {
+    sumas += 2;
+    if(sumas == i) {
+    break;
     } else {
-      array.push(sumar);
+      array.push(sumas);
     }
   }
-
-  if(i < 10){
-    return "Se interrumpió la ejecución";
+  
+  if(i < 10) {
+    return 'Se interrumpió la ejecución';
   } else {
-    return array;
+      return array;
   }
 }
 
@@ -246,7 +247,18 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
-  
+
+  let array = [];
+  let sumas = numero;
+  for(let i = 0; i < 10; i++){
+    if(i === 5){
+      continue;
+    } else {
+      sumas += 2;
+      array.push(sumas);
+    }
+  }
+  return array;
 }
 
 
